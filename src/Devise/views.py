@@ -3,4 +3,4 @@ from django.shortcuts import render
 
 # Create your views here.
 def dashboard(request):
-    return HttpResponse("<h1>Hello World !</h1>")
+    return render(request, 'Devise/index.html', context={'titre': 'Hello there !'})
