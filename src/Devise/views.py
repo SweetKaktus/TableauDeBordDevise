@@ -1,6 +1,12 @@
-from django.http import HttpResponse
 from django.shortcuts import render
+
+import api
 
 # Create your views here.
 def dashboard(request):
-    return render(request, 'Devise/index.html', context={'titre': 'Hello there !'})
+    days, rates = api.get_rates(currencies=['USD'], days=30)
+    context = {
+        'data': rates['USD'],
+        'days_labels': days
+    }
+    return render(request, 'Devise/index.html', context=context)

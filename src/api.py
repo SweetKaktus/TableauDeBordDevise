@@ -22,10 +22,6 @@ def get_rates(currencies: list[str], days:int=30):
     for each_day in all_days:
         [all_rates[currency].append(rate) for currency, rate in api_rates[each_day].items()]
 
-    pprint(all_rates)
-
-
-
     return all_days, all_rates
 
 
