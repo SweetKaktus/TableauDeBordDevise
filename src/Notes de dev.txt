@@ -1,2 +1,4 @@
 Je vais essayer de transformer cette app avec de fausses données en un site de suivi
 du cours de la bourse des entreprises de dév de jeux videos.
+
+flemme
